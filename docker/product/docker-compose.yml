@@ -4,7 +4,7 @@ services:
   main:
     build: ./apache
     volumes:
-    - ./apache/www:/var/www
+    - ./apache/www:/var/www:z
     ports:
     - ${SDCBAR_PORT}:80
   sdcbar_db:
@@ -13,4 +13,4 @@ services:
       dockerfile: ./docker/product/mysql/Dockerfile
     container_name: sdcbar_product_db_1
     volumes:
-    - ${SDCBAR_DATA_DIR}:/var/lib/mysql
+    - ${SDCBAR_DATA_DIR}:/var/lib/mysql:z

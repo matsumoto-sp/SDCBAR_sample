@@ -13,6 +13,6 @@ services:
       "
     container_name: sdcbar_build_vue_1
     volumes:
-    - ../../client-side:/data
-    - ../product/apache/www:/output
-    - ../../server-side/api:/api
+    - ../../client-side:/data:z
+    - ../product/apache/www:/output:z
+    - ../../server-side/api:/api:z
