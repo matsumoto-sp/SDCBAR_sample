@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  main:
+    build: ./apache
+    volumes:
+    - ./apache/www:/var/www
+    ports:
+    - ${SDCBAR_PORT}:80
+  sdcbar_db:
+    build:
+      context: ../../
+      dockerfile: ./docker/product/mysql/Dockerfile
+    container_name: sdcbar_product_db_1
+    volumes:
+    - ${SDCBAR_DATA_DIR}:/var/lib/mysql

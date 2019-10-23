@@ -1,0 +1,9 @@
+CALL add_user('member_1', 'member_1_pw', 'member_1 profile', 'member_1@example.com');
+CALL add_user('member_2', 'member_2_pw', 'member_2 profile', 'member_2@example.com');
+CALL add_user('member_3', 'member_3_pw', 'member_3 profile', 'member_3@example.com');
+CALL add_user('member_4', 'member_4_pw', 'member_4 profile', 'member_4@example.com');
+CALL add_user('member_5', 'member_5_pw', 'member_5 profile', 'member_5@example.com');
+CALL add_user('member_6', 'member_6_pw', 'member_6 profile', 'member_6@example.com');
+CALL add_user('member_7', 'member_7_pw', 'member_7 profile', 'member_7@example.com');
+CALL add_user('member_8', 'member_8_pw', 'member_8 profile', 'member_8@example.com');
+CALL add_user('member_9', 'member_9_pw', 'member_9 profile', 'member_9@example.com');

@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  sdcbar_php:
+    build: ./php
+    container_name: sdcbar_dev_php_1
+    volumes:
+    - ../../server-side:/data
+  sdcbar_vue:
+    image: node:8.16
+    working_dir: /data
+    command: /bin/sh -c "while :; do sleep 1000; done"
+    container_name: sdcbar_dev_vue_1
+    volumes:
+    - ../../client-side:/data
+    ports:
+      - 8080:8080
+  sdcbar_db:
+    build:
+      context: ../../
+      dockerfile: ./docker/develop/mysql/Dockerfile
+    container_name: sdcbar_dev_db_1

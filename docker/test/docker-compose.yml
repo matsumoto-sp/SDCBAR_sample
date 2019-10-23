@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  main:
+    build: ./phpunit
+    container_name: dcbar_test_phpunit_1
+    volumes:
+    - ../../server-side:/data
+  sdcbar_db:
+    build: ./mysql
+    container_name: dcbar_test_db_1

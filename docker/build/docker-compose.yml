@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  sdcbar_vue:
+    image: node:8.16
+    working_dir: /data
+    command: >
+      /bin/sh -c "
+        npm i;
+        npm run build;
+        cp -pr /api /output/html;
+        echo '{\"db\":{\"host\":\"sdcbar_db\",\"db\":\"sdcbar\"}}' > /output/html/config.json
+      "
+    container_name: sdcbar_build_vue_1
+    volumes:
+    - ../../client-side:/data
+    - ../product/apache/www:/output
+    - ../../server-side/api:/api

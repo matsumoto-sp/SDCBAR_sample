@@ -1,0 +1,14 @@
+{
+  "db": {
+    "host": "sdcbar_db",
+	"db": "sdcbar"
+  },
+  "root": {
+    "host": "sdcbar_db",
+    "user": "root",
+    "password": ""
+  },
+  "test": {
+	"apiServer": "127.0.0.1:9999"
+  }
+}
